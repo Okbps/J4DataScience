@@ -5,12 +5,7 @@ import java.sql.*;
 /**
  * Created by Aspire on 10.06.2017.
  */
-public class DataBases {
-    public static void main(String[] args) {
-        DataBases dbs = new DataBases();
-        dbs.connect();
-    }
-
+public class DBUnderstanding {
     void connect(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
