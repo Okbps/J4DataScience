@@ -1,4 +1,4 @@
-package ch01;
+package ch01GettingStarted;
 
 import weka.classifiers.Evaluation;
 import weka.classifiers.functions.MultilayerPerceptron;

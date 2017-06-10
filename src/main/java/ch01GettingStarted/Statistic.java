@@ -1,4 +1,4 @@
-package ch01;
+package ch01GettingStarted;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 import org.apache.commons.math3.stat.descriptive.SynchronizedDescriptiveStatistics;

@@ -1,4 +1,4 @@
-package ch01;
+package ch01GettingStarted;
 
 import com.aliasi.tokenizer.EnglishStopTokenizerFactory;
 import com.aliasi.tokenizer.IndoEuropeanTokenizerFactory;

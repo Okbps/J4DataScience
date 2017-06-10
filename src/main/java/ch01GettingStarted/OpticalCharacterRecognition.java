@@ -1,4 +1,4 @@
-package ch01;
+package ch01GettingStarted;
 
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
