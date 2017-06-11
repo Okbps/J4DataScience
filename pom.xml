@@ -66,6 +66,11 @@
             <artifactId>crawler4j</artifactId>
             <version>4.3</version>
         </dependency>
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>hbc-core</artifactId>
+            <version>2.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>
