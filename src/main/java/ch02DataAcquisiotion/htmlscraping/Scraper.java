@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.webscraping;
+package ch02DataAcquisiotion.htmlscraping;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
