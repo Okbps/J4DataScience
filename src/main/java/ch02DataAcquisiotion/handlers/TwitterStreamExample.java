@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.twitter;
+package ch02DataAcquisiotion.handlers;
 
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Constants;
@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Aspire on 11.06.2017.
  */
-public class SampleStreamExample {
+public class TwitterStreamExample {
 
     public static void main(String[] args) throws IOException {
         Properties prop = new Properties();
@@ -32,7 +32,7 @@ public class SampleStreamExample {
         }
 
         try {
-            SampleStreamExample.streamTwitter(
+            TwitterStreamExample.streamTwitter(
                     (String)prop.get("consumerKey"),
                     (String)prop.get("consumerSecret"),
                     (String)prop.get("accessToken"),

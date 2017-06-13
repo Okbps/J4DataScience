@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.wikipedia;
+package ch02DataAcquisiotion.handlers;
 
 import info.bliki.api.Page;
 import info.bliki.api.User;
@@ -15,12 +15,13 @@ import java.util.Properties;
 /**
  * Created by Aspire on 12.06.2017.
  */
-public class Handler {
+public class WikipediaExample {
     public static void main(String[] args) throws IOException {
         Properties prop = new Properties();
         prop.load(new FileInputStream("src/main/resources/template.properties"));
 
-        User user = new User((String)prop.get("wikiName"),
+        User user = new User(
+                (String)prop.get("wikiName"),
                 (String)prop.get("wikiPassword"),
                 "https://en.wikipedia.org/w/api.php");
 
