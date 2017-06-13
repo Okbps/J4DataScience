@@ -23,7 +23,7 @@ public class SampleStreamExample {
 
     public static void main(String[] args) throws IOException {
         Properties prop = new Properties();
-        prop.load(new FileInputStream("src/main/resources/twitter-template.properties"));
+        prop.load(new FileInputStream("src/main/resources/template.properties"));
 
         Enumeration keys = prop.propertyNames();
         while(keys.hasMoreElements()){
