@@ -7,11 +7,9 @@ import com.twitter.hbc.core.processor.StringDelimitedProcessor;
 import com.twitter.hbc.httpclient.BasicClient;
 import com.twitter.hbc.httpclient.auth.Authentication;
 import com.twitter.hbc.httpclient.auth.OAuth1;
+import util.Props;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Enumeration;
-import java.util.Properties;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -22,21 +20,13 @@ import java.util.concurrent.TimeUnit;
 public class TwitterStreamExample {
 
     public static void main(String[] args) throws IOException {
-        Properties prop = new Properties();
-        prop.load(new FileInputStream("src/main/resources/template.properties"));
-
-        Enumeration keys = prop.propertyNames();
-        while(keys.hasMoreElements()){
-            Object key = keys.nextElement();
-            System.out.println(String.format("%s: %s", key, prop.get(key)));
-        }
 
         try {
             TwitterStreamExample.streamTwitter(
-                    (String)prop.get("consumerKey"),
-                    (String)prop.get("consumerSecret"),
-                    (String)prop.get("accessToken"),
-                    (String)prop.get("accessSecret")
+                    Props.getProperty("consumerKey"),
+                    Props.getProperty("consumerSecret"),
+                    Props.getProperty("accessToken"),
+                    Props.getProperty("accessSecret")
             );
         } catch (InterruptedException e) {
             e.printStackTrace();

@@ -4,24 +4,20 @@ import com.flickr4java.flickr.Flickr;
 import com.flickr4java.flickr.FlickrException;
 import com.flickr4java.flickr.REST;
 import com.flickr4java.flickr.photos.*;
+import util.Props;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 
 /**
  * Created by Aspire on 13.06.2017.
  */
 public class FlickrExample {
     public static void main(String[] args) throws IOException, FlickrException {
-        Properties prop = new Properties();
-        prop.load(new FileInputStream("src/main/resources/template.properties"));
-
-        String apikey = (String)prop.get("flickrKey");
-        String secret = (String)prop.get("flickrSecret");
+        String apikey = Props.getProperty("flickrKey");
+        String secret = Props.getProperty("flickrSecret");
 
         Flickr flickr = new Flickr(apikey, secret, new REST());
 

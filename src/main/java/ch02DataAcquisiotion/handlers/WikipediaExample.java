@@ -6,23 +6,19 @@ import info.bliki.wiki.filter.SectionHeader;
 import info.bliki.wiki.model.ITableOfContent;
 import info.bliki.wiki.model.Reference;
 import info.bliki.wiki.model.WikiModel;
+import util.Props;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
 
 /**
  * Created by Aspire on 12.06.2017.
  */
 public class WikipediaExample {
     public static void main(String[] args) throws IOException {
-        Properties prop = new Properties();
-        prop.load(new FileInputStream("src/main/resources/template.properties"));
-
         User user = new User(
-                (String)prop.get("wikiName"),
-                (String)prop.get("wikiPassword"),
+                Props.getProperty("wikiName"),
+                Props.getProperty("wikiPassword"),
                 "https://en.wikipedia.org/w/api.php");
 
         user.login();
