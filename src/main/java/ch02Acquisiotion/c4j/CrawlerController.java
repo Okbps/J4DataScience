@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.c4j;
+package ch02Acquisiotion.c4j;
 
 import edu.uci.ics.crawler4j.crawler.CrawlConfig;
 import edu.uci.ics.crawler4j.crawler.CrawlController;

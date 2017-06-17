@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.handlers;
+package ch02Acquisiotion.handlers;
 
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Constants;

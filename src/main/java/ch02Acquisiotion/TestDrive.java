@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion;
+package ch02Acquisiotion;
 
 /**
  * Created by Aspire on 10.06.2017.

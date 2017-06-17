@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion;
+package ch02Acquisiotion;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

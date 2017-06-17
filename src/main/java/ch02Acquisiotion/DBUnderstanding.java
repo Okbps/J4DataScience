@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion;
+package ch02Acquisiotion;
 
 import java.sql.*;
 

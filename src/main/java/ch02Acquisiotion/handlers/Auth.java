@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.handlers;
+package ch02Acquisiotion.handlers;
 
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.auth.oauth2.StoredCredential;

@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.handlers;
+package ch02Acquisiotion.handlers;
 
 import com.github.axet.wget.WGet;
 import com.google.api.services.youtube.model.SearchListResponse;

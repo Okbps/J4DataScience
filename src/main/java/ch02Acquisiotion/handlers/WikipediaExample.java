@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.handlers;
+package ch02Acquisiotion.handlers;
 
 import info.bliki.api.Page;
 import info.bliki.api.User;

@@ -1,4 +1,4 @@
-package ch02DataAcquisiotion.handlers;
+package ch02Acquisiotion.handlers;
 
 import com.flickr4java.flickr.Flickr;
 import com.flickr4java.flickr.FlickrException;
