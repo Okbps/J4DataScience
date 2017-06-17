@@ -6,6 +6,8 @@ import weka.core.Instances;
 
 import java.io.FileReader;
 
+import static util.Globals.RESOURCE_FOLDER;
+
 /**
  * Created by Aspire on 07.06.2017.
  */
@@ -15,8 +17,8 @@ public class ArtificialNeuralNetwork {
     }
 
     static void mlp(){
-        String trainingFileName = "src/main/resources/dermatologyTrainingSet.arff";
-        String testingFileName = "src/main/resources/dermatologyTestingSet.arff";
+        String trainingFileName = RESOURCE_FOLDER + "dermatologyTrainingSet.arff";
+        String testingFileName = RESOURCE_FOLDER + "dermatologyTestingSet.arff";
 
         try (
                 FileReader trainingReader = new FileReader(trainingFileName);

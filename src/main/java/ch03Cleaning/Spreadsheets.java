@@ -9,12 +9,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import static util.Globals.RESOURCE_FOLDER;
+
 /**
  * Created by Aspire on 17.06.2017.
  */
 public class Spreadsheets {
     public static void main(String[] args) {
-        try(FileInputStream fis = new FileInputStream(new File("src/main/resources/sample.xlsx"))){
+        try(FileInputStream fis = new FileInputStream(new File(RESOURCE_FOLDER + "sample.xlsx"))){
             XSSFWorkbook workbook = new XSSFWorkbook(fis);
             XSSFSheet sheet = workbook.getSheetAt(0);
 

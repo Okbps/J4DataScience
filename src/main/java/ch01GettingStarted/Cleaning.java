@@ -10,6 +10,8 @@ import com.fasterxml.jackson.core.JsonToken;
 
 import java.io.*;
 
+import static util.Globals.RESOURCE_FOLDER;
+
 /**
  * Created by Aspire on 06.06.2017.
  */
@@ -23,7 +25,7 @@ public class Cleaning {
         String text = "";
 
         try {
-            FileInputStream fis = new FileInputStream("com/src/main/resources/Ishmael.txt");
+            FileInputStream fis = new FileInputStream(RESOURCE_FOLDER + "Ishmael.txt");
             byte[] bytes = new byte[fis.available()];
             fis.read(bytes);
             text = new String(bytes);
@@ -40,7 +42,7 @@ public class Cleaning {
     }
 
     static void readJson(){
-        File file = new File("com/src/main/resources/Person.json");
+        File file = new File(RESOURCE_FOLDER + "Person.json");
 
         try {
             JsonFactory jsonfactory = new JsonFactory();

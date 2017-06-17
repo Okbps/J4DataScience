@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import static util.Globals.RESOURCE_FOLDER;
+
 /**
  * Created by Aspire on 14.06.2017.
  */
@@ -12,7 +14,7 @@ public class Props {
 
     static{
         try {
-            PROPERTIES.load(new FileInputStream("src/main/resources/template.properties"));
+            PROPERTIES.load(new FileInputStream(RESOURCE_FOLDER + "template.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }

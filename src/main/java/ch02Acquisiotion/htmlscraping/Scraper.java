@@ -7,6 +7,8 @@ import org.jsoup.select.Elements;
 import java.io.File;
 import java.io.IOException;
 
+import static util.Globals.RESOURCE_FOLDER;
+
 /**
  * Created by Aspire on 11.06.2017.
  */
@@ -63,7 +65,7 @@ public class Scraper {
     }
 
     Document getFromFile(){
-        File file = new File("src/main/resources/Example.html");
+        File file = new File(RESOURCE_FOLDER + "Example.html");
         try {
             return Jsoup.parse(file, "UTF-8", "");
         } catch (IOException e) {

@@ -8,12 +8,14 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static util.Globals.RESOURCE_FOLDER;
+
 /**
  * Created by Aspire on 17.06.2017.
  */
 public class CsvHandler {
     public static void main(String[] args) {
-        String pathName = "src/main/resources/Demographic.csv";
+        String pathName = RESOURCE_FOLDER + "Demographic.csv";
 
         CsvHandler handler = new CsvHandler();
 
