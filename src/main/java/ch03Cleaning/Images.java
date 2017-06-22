@@ -17,10 +17,10 @@ public class Images {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
         Images images = new Images();
-//        images.changeContrast();
-//        images.smooth();
-//        images.brighten();
-//        images.resize();
+        images.changeContrast();
+        images.smooth();
+        images.brighten();
+        images.resize();
         images.convert();
     }
 
@@ -30,7 +30,7 @@ public class Images {
 
         Mat destination = new Mat(source.rows(), source.cols(), source.type());
         Imgproc.equalizeHist(source, destination);
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "engancedParrot.jpg", destination);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "enhancedParrot.jpg", destination);
     }
 
     void smooth(){
