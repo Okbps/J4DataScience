@@ -1,7 +1,6 @@
 package ch04Visualization;
 
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
@@ -9,7 +8,7 @@ import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
 import static ch04Visualization.ChartUtils.addDataItem;
-import static ch04Visualization.ChartUtils.showScene;
+import static ch04Visualization.ChartUtils.showXYChart;
 
 /**
  * Created by Aspire on 04.07.2017.
@@ -42,7 +41,7 @@ public class IndexChart extends Application{
         addDataItem(series, "1990", 9969310);
         addDataItem(series, "2000", 10263618);
 
-        showScene(lineChart, stage, series);
+        showXYChart(lineChart, stage, series);
     }
 
 }

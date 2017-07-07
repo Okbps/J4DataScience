@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.util.Arrays;
 
 import static ch04Visualization.ChartUtils.addDataItem;
-import static ch04Visualization.ChartUtils.showScene;
+import static ch04Visualization.ChartUtils.showXYChart;
 import static util.Globals.*;
 
 /**
@@ -69,6 +69,6 @@ public class StackedGraph extends Application{
         addDataItem(series3, sweden, 8042803);
         addDataItem(series3, unitedKingdom, 55632000);
 
-        showScene(stackedBarChart, stage, series1, series2, series3);
+        showXYChart(stackedBarChart, stage, series1, series2, series3);
     }
 }

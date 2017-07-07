@@ -9,7 +9,7 @@ import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
 import static ch04Visualization.ChartUtils.addDataItem;
-import static ch04Visualization.ChartUtils.showScene;
+import static ch04Visualization.ChartUtils.showXYChart;
 import static util.Globals.*;
 
 /**
@@ -113,6 +113,6 @@ public class BarChartExample extends Application{
         addDataItem(series3, sweden, 8042803);
         addDataItem(series3, unitedKingdom, 55632000);
 
-        showScene(barChart, stage, series1, series2, series3);
+        showXYChart(barChart, stage, series1, series2, series3);
     }
 }
