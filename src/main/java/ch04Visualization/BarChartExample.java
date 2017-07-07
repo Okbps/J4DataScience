@@ -8,17 +8,14 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
+import static ch04Visualization.ChartUtils.addDataItem;
+import static ch04Visualization.ChartUtils.showScene;
+import static util.Globals.*;
+
 /**
  * Created by Aspire on 06.07.2017.
  */
 public class BarChartExample extends Application{
-    final static String belgium = "Belgium";
-    final static String france = "France";
-    final static String germany = "Germany";
-    final static String netherlands = "Netherlands";
-    final static String sweden = "Sweden";
-    final static String unitedKingdom = "United Kingdom";
-    final CategoryAxis xAxis = new CategoryAxis();
     final NumberAxis yAxis = new NumberAxis();
     final XYChart.Series<String, Number> series1 = new XYChart.Series<>();
     final XYChart.Series<String, Number> series2 = new XYChart.Series<>();
@@ -26,6 +23,7 @@ public class BarChartExample extends Application{
     final XYChart.Series<String, Number> series4 = new XYChart.Series<>();
     final XYChart.Series<String, Number> series5 = new XYChart.Series<>();
     final XYChart.Series<String, Number> series6 = new XYChart.Series<>();
+    final CategoryAxis xAxis = new CategoryAxis();
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -115,13 +113,6 @@ public class BarChartExample extends Application{
         addDataItem(series3, sweden, 8042803);
         addDataItem(series3, unitedKingdom, 55632000);
 
-        Scene scene = new Scene(barChart, 800, 600);
-        barChart.getData().addAll(series1, series2, series3);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void addDataItem(XYChart.Series<String, Number> series, String x, Number y){
-        series.getData().add(new XYChart.Data<>(x, y));
+        showScene(barChart, stage, series1, series2, series3);
     }
 }

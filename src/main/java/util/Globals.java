@@ -1,5 +1,7 @@
 package util;
 
+import javafx.scene.chart.CategoryAxis;
+
 /**
  * Created by Aspire on 17.06.2017.
  */
@@ -9,4 +11,11 @@ public class Globals {
             + " long precisely - having little or no money in my purse,"
             + " and nothing particular to interest me on shore, I thought"
             + " I would sail about a little and see the watery part of the world.";
+
+    public final static String belgium = "Belgium";
+    public final static String france = "France";
+    public final static String germany = "Germany";
+    public final static String netherlands = "Netherlands";
+    public final static String sweden = "Sweden";
+    public final static String unitedKingdom = "United Kingdom";
 }

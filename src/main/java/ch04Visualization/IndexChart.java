@@ -8,6 +8,9 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
 
+import static ch04Visualization.ChartUtils.addDataItem;
+import static ch04Visualization.ChartUtils.showScene;
+
 /**
  * Created by Aspire on 04.07.2017.
  */
@@ -15,7 +18,6 @@ public class IndexChart extends Application{
     final XYChart.Series<String, Number> series = new XYChart.Series<>();
     final CategoryAxis xAxis = new CategoryAxis();
     final NumberAxis yAxis = new NumberAxis(8000000, 11000000, 1000000);
-    final static String belgium = "Belgium";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -40,13 +42,7 @@ public class IndexChart extends Application{
         addDataItem(series, "1990", 9969310);
         addDataItem(series, "2000", 10263618);
 
-        Scene scene = new Scene(lineChart, 800, 600);
-        lineChart.getData().add(series);
-        stage.setScene(scene);
-        stage.show();
+        showScene(lineChart, stage, series);
     }
 
-    public void addDataItem(XYChart.Series<String, Number> series, String x, Number y){
-        series.getData().add(new XYChart.Data<>(x, y));
-    }
 }
