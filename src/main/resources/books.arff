@@ -1,0 +1,19 @@
+@RELATION book_purchases
+@ATTRIBUTE Binding {Hardcover, Paperback, Leather}
+@ATTRIBUTE Multicolor {yes, no}
+@ATTRIBUTE Genre {fiction, comedy, romance, historical}
+@ATTRIBUTE Result {Success, Failure}
+@DATA
+Hardcover,yes,fiction,Success
+Hardcover,no,comedy,Failure
+Hardcover,yes,comedy,Success
+Leather,no,comedy,Success
+Leather,yes,historical,Success
+Paperback,yes,fiction,Failure
+Paperback,yes,romance,Failure
+Leather,yes,comedy,Failure
+Paperback,no,fiction,Failure
+Paperback,yes,historical,Failure
+Hardcover,yes,historical,Success
+Paperback,yes,comedy,Success
+Hardcover,yes,comedy,Success
