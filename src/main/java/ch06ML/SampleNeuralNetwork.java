@@ -65,7 +65,7 @@ public class SampleNeuralNetwork {
         this.learningRate   = learningRate;
         this.momentum       = momentum;
         this.totalNeurons   = inputCount + hiddenCount + outputCount;
-        this.weights        = hiddenCount * (inputCount + outputCount);
+        this.weights        = inputCount * hiddenCount + hiddenCount * outputCount;
 
         this.outputResults  = new double[totalNeurons];
         this.resultsMatrix  = new double[weights];

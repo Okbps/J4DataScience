@@ -5,7 +5,6 @@ import weka.core.Instances;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 
 import static util.Globals.RESOURCE_FOLDER;
 
