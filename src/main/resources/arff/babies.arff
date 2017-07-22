@@ -1,0 +1,11 @@
+@relation TEST_ITEM_TRANS
+@attribute Diapers {1, 0}
+@attribute Lotion {1, 0}
+@attribute Wipes {1, 0}
+@attribute Formula {1, 0}
+@data
+1,1,1,0
+1,1,1,1
+0,1,1,0
+1,0,0,0
+0,1,1,1
