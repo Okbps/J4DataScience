@@ -1,4 +1,4 @@
-package ch06ML;
+package ch07NN;
 
 /**
  * THIS CODE ADAPTED FROM:

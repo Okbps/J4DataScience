@@ -1,4 +1,4 @@
-package ch06ML;
+package ch07NN;
 
 import weka.classifiers.Evaluation;
 import weka.classifiers.functions.MultilayerPerceptron;
