@@ -20,7 +20,7 @@ import static util.Globals.RESOURCE_FOLDER;
 public class SVMExample {
     public static void main(String[] args) throws Exception {
         SVMExample example = new SVMExample();
-        BufferedReader dataFile = example.readDataFile(RESOURCE_FOLDER + "camping.arff");
+        BufferedReader dataFile = example.readDataFile(RESOURCE_FOLDER + "arff/camping.arff");
 
         Instances data = new Instances(dataFile);
         data.setClassIndex(data.numAttributes()-1);

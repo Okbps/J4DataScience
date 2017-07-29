@@ -28,7 +28,7 @@ import static util.Globals.RESOURCE_FOLDER;
 public class HistogramExample extends JFrame{
     public HistogramExample() {
         DataReader readType = DataReaderFactory.getInstance().get("text/csv");
-        String fileName = RESOURCE_FOLDER + "AgeOfMarriage.csv";
+        String fileName = RESOURCE_FOLDER + "csv/AgeOfMarriage.csv";
         try {
             DataTable histData = (DataTable) readType.read(new FileInputStream(fileName), Integer.class);
 

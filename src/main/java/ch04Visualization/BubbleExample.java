@@ -24,7 +24,7 @@ import static util.Globals.RESOURCE_FOLDER;
 public class BubbleExample extends JFrame{
     public BubbleExample() throws HeadlessException {
         DataReader readType = DataReaderFactory.getInstance().get("text/csv");
-        String fileName = RESOURCE_FOLDER + "MarriageByYears.csv";
+        String fileName = RESOURCE_FOLDER + "csv/MarriageByYears.csv";
         try{
             DataTable bubbleData = (DataTable)readType.read(
                     new FileInputStream(fileName),

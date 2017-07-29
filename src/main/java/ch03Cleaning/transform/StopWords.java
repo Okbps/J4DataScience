@@ -34,7 +34,7 @@ public class StopWords {
 
     List<String> removeStopWords(List<String>dirtyText){
         try {
-            Scanner readStop = new Scanner(new File(RESOURCE_FOLDER+"stopwords.txt"));
+            Scanner readStop = new Scanner(new File(RESOURCE_FOLDER+"txt/stopwords.txt"));
 
             List<String> foundWords = new ArrayList();
             while(readStop.hasNextLine()){

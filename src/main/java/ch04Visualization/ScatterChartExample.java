@@ -27,7 +27,7 @@ public class ScatterChartExample extends Application{
 
         XYChart.Series series = new XYChart.Series();
 
-        try(CSVReader dataReader = new CSVReader(new FileReader(RESOURCE_FOLDER + "2014_apple_stock.csv"), ',')){
+        try(CSVReader dataReader = new CSVReader(new FileReader(RESOURCE_FOLDER + "csv/2014_apple_stock.csv"), ',')){
             String[]nextLine;
             while((nextLine = dataReader.readNext()) != null){
                 LocalDate localDate = LocalDate.parse(nextLine[0], DateTimeFormatter.ofPattern("yyyy-MM-dd"));

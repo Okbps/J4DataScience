@@ -18,7 +18,7 @@ public class BookDecisionTree {
     private Instances trainingData;
 
     public static void main(String[] args) throws Exception {
-        BookDecisionTree decisionTree = new BookDecisionTree(RESOURCE_FOLDER + "books.arff");
+        BookDecisionTree decisionTree = new BookDecisionTree(RESOURCE_FOLDER + "arff/books.arff");
         J48 tree = decisionTree.performTraining();
         System.out.println(tree.toString());
 

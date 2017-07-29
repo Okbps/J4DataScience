@@ -10,7 +10,7 @@ import static util.Globals.RESOURCE_FOLDER;
 
 public class AssociationAprioriExample {
     public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new FileReader(RESOURCE_FOLDER + "babies.arff"));
+        BufferedReader br = new BufferedReader(new FileReader(RESOURCE_FOLDER + "arff/babies.arff"));
         Instances data = new Instances(br);
         br.close();
 

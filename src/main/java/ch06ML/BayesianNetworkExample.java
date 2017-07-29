@@ -69,7 +69,7 @@ public class BayesianNetworkExample {
         try{
             CsvUtil.saveSamples(
                     bayesGraph, new FileWriter(
-                            new File(RESOURCE_FOLDER + "JBayesInfo.csv")
+                            new File(RESOURCE_FOLDER + "csv/JBayesInfo.csv")
                     ));
         }catch (IOException e){
             e.printStackTrace();

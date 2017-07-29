@@ -46,7 +46,7 @@ public class Subsetting {
     }
 
     void blankLines(){
-        try(BufferedReader br = new BufferedReader(new FileReader(RESOURCE_FOLDER+"stopwords.txt"))){
+        try(BufferedReader br = new BufferedReader(new FileReader(RESOURCE_FOLDER+"txt/stopwords.txt"))){
             br
                     .lines()
                     .filter(s -> !s.equals(""))

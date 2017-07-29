@@ -17,8 +17,8 @@ public class ArtificialNeuralNetwork {
     }
 
     static void mlp(){
-        String trainingFileName = RESOURCE_FOLDER + "dermatologyTrainingSet.arff";
-        String testingFileName = RESOURCE_FOLDER + "dermatologyTestingSet.arff";
+        String trainingFileName = RESOURCE_FOLDER + "arff/dermatologyTrainingSet.arff";
+        String testingFileName = RESOURCE_FOLDER + "arff/dermatologyTestingSet.arff";
 
         try (
                 FileReader trainingReader = new FileReader(trainingFileName);

@@ -15,7 +15,7 @@ import static util.Globals.RESOURCE_FOLDER;
  */
 public class CsvHandler {
     public static void main(String[] args) {
-        String pathName = RESOURCE_FOLDER + "Demographic.csv";
+        String pathName = RESOURCE_FOLDER + "csv/Demographic.csv";
 
         CsvHandler handler = new CsvHandler();
 

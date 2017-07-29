@@ -43,7 +43,7 @@ public class FindWords {
     }
 
     void findWordBuffer(String toFind){
-        String path = RESOURCE_FOLDER+"Ishmael.txt";
+        String path = RESOURCE_FOLDER+"txt/Ishmael.txt";
         try{
             String textLine = "";
             toFind = toFind.toLowerCase().trim();

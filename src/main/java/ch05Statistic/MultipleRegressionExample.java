@@ -28,7 +28,7 @@ public class MultipleRegressionExample extends Application{
     public void start(Stage stage) throws Exception {
         int i = 0;
         try(CSVReader reader = new CSVReader(
-                new FileReader(RESOURCE_FOLDER + "cigarettes.csv"), ',')){
+                new FileReader(RESOURCE_FOLDER + "csv/cigarettes.csv"), ',')){
             String[]nextLine;
             while((nextLine = reader.readNext()) != null){
                 String brandName                = nextLine[0];

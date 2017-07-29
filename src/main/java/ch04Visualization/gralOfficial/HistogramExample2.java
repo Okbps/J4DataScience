@@ -24,7 +24,7 @@ public class HistogramExample2 extends ExamplePanel{
         // Create example data
         DataTable data = new DataTable(Integer.class, Double.class);
 
-        try(CSVReader dataReader = new CSVReader(new FileReader(RESOURCE_FOLDER + "AgeOfMarriageBY.csv"), ',')){
+        try(CSVReader dataReader = new CSVReader(new FileReader(RESOURCE_FOLDER + "csv/AgeOfMarriageBY.csv"), ',')){
             String[]nextLine;
             while((nextLine = dataReader.readNext()) != null){
                 data.add(Integer.parseInt(nextLine[0]), Double.parseDouble(nextLine[1]));
