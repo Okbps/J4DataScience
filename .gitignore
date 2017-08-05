@@ -7,3 +7,6 @@
 /src/main/resources/private.properties
 /opencv_java320.dll
 /SelfOrganizingMap1.0.3/
+/src/main/resources/models/
+/src/main/resources/txt/labeled/
+/src/main/resources/txt/unlabeled/
