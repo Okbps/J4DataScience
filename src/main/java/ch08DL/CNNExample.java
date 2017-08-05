@@ -7,11 +7,11 @@ import org.deeplearning4j.nn.api.OptimizationAlgorithm;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
 import org.deeplearning4j.nn.conf.Updater;
+import org.deeplearning4j.nn.conf.inputs.InputType;
 import org.deeplearning4j.nn.conf.layers.ConvolutionLayer;
 import org.deeplearning4j.nn.conf.layers.DenseLayer;
 import org.deeplearning4j.nn.conf.layers.OutputLayer;
 import org.deeplearning4j.nn.conf.layers.SubsamplingLayer;
-import org.deeplearning4j.nn.conf.layers.setup.ConvolutionLayerSetup;
 import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
 import org.deeplearning4j.optimize.api.IterationListener;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
@@ -77,8 +77,8 @@ public class CNNExample {
                     .build())
                 .backprop(true).pretrain(false);
 
-//        builder.setInputType(InputType.convolutionalFlat(28, 28, 6));
-        new ConvolutionLayerSetup(builder, 28, 28, 1);
+        builder.setInputType(InputType.convolutionalFlat(28, 28, 6));
+//        new ConvolutionLayerSetup(builder, 28, 28, 1);
 
         MultiLayerConfiguration conf = builder.build();
         MultiLayerNetwork model = new MultiLayerNetwork(conf);
