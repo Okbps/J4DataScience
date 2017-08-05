@@ -14,15 +14,16 @@ import java.io.InputStream;
 
 import static util.Globals.RESOURCE_FOLDER;
 
+// NER - named entity recognition
 public class NerExample {
     public static void main(String[] args) {
         try(
                 InputStream tokenStream = new FileInputStream(
-                        new File(RESOURCE_FOLDER+"en-token.bin"));
+                        new File(RESOURCE_FOLDER+"models/en-token.bin"));
                 InputStream personModelStream = new FileInputStream(
-                        new File(RESOURCE_FOLDER+"en-ner-person.bin"));
+                        new File(RESOURCE_FOLDER+"models/en-ner-person.bin"));
                 InputStream locationModelStream = new FileInputStream(
-                        new File(RESOURCE_FOLDER+"en-ner-location.bin"));
+                        new File(RESOURCE_FOLDER+"models/en-ner-location.bin"));
         ){
             TokenizerModel tm = new TokenizerModel(tokenStream);
             TokenizerME tokenizer = new TokenizerME(tm);

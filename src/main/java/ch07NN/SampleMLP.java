@@ -50,8 +50,8 @@ public class SampleMLP {
                 }
             }
 
-            SerializationHelper.write(RESOURCE_FOLDER + "mlpModel", mlp);
-            mlp = (MultilayerPerceptron)SerializationHelper.read(RESOURCE_FOLDER + "mlpModel");
+            SerializationHelper.write(RESOURCE_FOLDER + "models/mlpModel", mlp);
+            mlp = (MultilayerPerceptron)SerializationHelper.read(RESOURCE_FOLDER + "models/mlpModel");
         }catch(Exception e) {
             e.printStackTrace();
         }
