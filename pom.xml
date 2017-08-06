@@ -7,6 +7,10 @@
     <groupId>groupId</groupId>
     <artifactId>j4ds</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <dl4j.version>0.9.0</dl4j.version>
+        <nd4j.version>0.9.0</nd4j.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -148,20 +152,72 @@
             <artifactId>jbayes-inference</artifactId>
             <version>0.0.3</version>
         </dependency>
+
         <dependency>
             <groupId>org.deeplearning4j</groupId>
             <artifactId>deeplearning4j-core</artifactId>
-            <version>0.9.0</version>
+            <version>${dl4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.nd4j</groupId>
+                    <artifactId>nd4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.nd4j</groupId>
+                    <artifactId>jackson</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.datavec</groupId>
+                    <artifactId>datavec-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.datavec</groupId>
+                    <artifactId>datavec-data-image</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-api</artifactId>
+            <version>${dl4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.nd4j</groupId>
-            <artifactId>nd4j-native-platform</artifactId>
-            <version>0.9.0</version>
+            <artifactId>jackson</artifactId>
+            <version>${dl4j.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.datavec</groupId>
+            <artifactId>datavec-api</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.datavec</groupId>
+            <artifactId>datavec-data-image</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.deeplearning4j</groupId>
             <artifactId>deeplearning4j-nlp</artifactId>
-            <version>0.9.0</version>
+            <version>${dl4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.nd4j</groupId>
+                    <artifactId>nd4j-native-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.nd4j</groupId>
+                    <artifactId>nd4j-jackson</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--<dependency>-->
             <!--<groupId>org.deeplearning4j</groupId>-->
