@@ -1,5 +1,7 @@
 package ch10VisualAudio;
 
+import com.sun.speech.freetts.VoiceManager;
+
 import java.beans.PropertyVetoException;
 import java.util.Locale;
 
@@ -20,8 +22,7 @@ public class TTSExample {
             EngineStateError, PropertyVetoException {
         if (desc == null) {
             //default
-//			System.setProperty("freetts.voices",
-//					"com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
+//			System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
 
             //have to be setup
             System.setProperty("freetts.voices", "de.dfki.lt.freetts.en.us.MbrolaVoiceDirectory");
@@ -30,8 +31,7 @@ public class TTSExample {
             synthesizer = Central.createSynthesizer(desc);
             synthesizer.allocate();
             synthesizer.resume();
-            SynthesizerModeDesc smd = (SynthesizerModeDesc) synthesizer
-                    .getEngineModeDesc();
+            SynthesizerModeDesc smd = (SynthesizerModeDesc) synthesizer.getEngineModeDesc();
             Voice[] voices = smd.getVoices();
             Voice voice = null;
             for (int i = 0; i < voices.length; i++) {
@@ -41,6 +41,19 @@ public class TTSExample {
                 }
             }
             synthesizer.getSynthesizerProperties().setVoice(voice);
+
+            VoiceManager vm = VoiceManager.getInstance();
+
+            com.sun.speech.freetts.Voice v = vm.getVoice(voiceName);
+
+            System.out.println("Name: "         + v.getName());
+            System.out.println("Description: "  + v.getDescription());
+            System.out.println("Organization: " + v.getOrganization());
+            System.out.println("Age: "          + v.getAge());
+            System.out.println("Gender: "       + v.getGender());
+            System.out.println("Rate: "         + v.getRate());
+            System.out.println("Pitch: "        + v.getPitch());
+            System.out.println("Style: "        + v.getStyle());
         }
     }
 
@@ -69,5 +82,5 @@ public class TTSExample {
         su.terminate();
     }
 
-    final static String SAMPLE = "Wiki said, Floyd Mayweather, Jr. is an American professional boxer. He is currently undefeated as a professional and is a five-division world champion, having won ten world titles and the lineal championship in four different weight classes";
+    final static String SAMPLE = "Wiki said, Floyd Mayweather, Jr. is an American professional boxer.";
 }
