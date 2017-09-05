@@ -25,44 +25,44 @@ public class Images {
     }
 
     void changeContrast(){
-        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "GrayScaleParrot.png",
+        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "pic/GrayScaleParrot.png",
                 Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 
         Mat destination = new Mat(source.rows(), source.cols(), source.type());
         Imgproc.equalizeHist(source, destination);
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "enhancedParrot.jpg", destination);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/enhancedParrot.jpg", destination);
     }
 
     void smooth(){
-        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "cat.jpg");
+        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "pic/cat.jpg");
         Mat destination = source.clone();
         for (int i = 0; i < 25; i++) {
             Mat sourceImage = destination.clone();
             Imgproc.blur(sourceImage, destination, new Size(3.0, 3.0));
         }
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "smoothCat.jpg", destination);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/smoothCat.jpg", destination);
     }
 
     void brighten(){
-        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "cat.jpg");
+        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "pic/cat.jpg");
         Mat destination = new Mat(source.rows(), source.cols(), source.type());
         source.convertTo(destination, -1, 1, 50);
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "brighterCat.jpg", destination);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/brighterCat.jpg", destination);
     }
 
     void resize(){
-        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "cat.jpg");
+        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "pic/cat.jpg");
         Mat resizeImage = new Mat();
         Imgproc.resize(source, resizeImage, new Size(250, 250));
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "resizedCat.jpg", resizeImage);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/resizedCat.jpg", resizeImage);
     }
 
     void convert(){
-        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "cat.jpg");
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "convertedCat.jpg", source);
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "convertedCat.jpeg", source);
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "convertedCat.webp", source);
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "convertedCat.png", source);
-        Imgcodecs.imwrite(RESOURCE_FOLDER + "convertedCat.tiff", source);
+        Mat source = Imgcodecs.imread(RESOURCE_FOLDER + "pic/cat.jpg");
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/convertedCat.jpg", source);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/convertedCat.jpeg", source);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/convertedCat.webp", source);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/convertedCat.png", source);
+        Imgcodecs.imwrite(RESOURCE_FOLDER + "pic/convertedCat.tiff", source);
     }
 }

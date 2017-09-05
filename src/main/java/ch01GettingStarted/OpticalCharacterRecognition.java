@@ -13,13 +13,9 @@ import static util.Globals.RESOURCE_FOLDER;
  */
 public class OpticalCharacterRecognition {
     public static void main(String[] args) {
-        recognize();
-    }
-
-    static void recognize(){
         ITesseract instance = new Tesseract();
         try {
-            String result = instance.doOCR(new File(RESOURCE_FOLDER + "OCRExample.jpg"));
+            String result = instance.doOCR(new File(RESOURCE_FOLDER + "pic/OCRExample2.jpg"));
             System.out.println(result);
         } catch (TesseractException e) {
             e.printStackTrace();
