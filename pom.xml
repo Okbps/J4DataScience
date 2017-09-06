@@ -10,6 +10,8 @@
     <properties>
         <dl4j.version>0.9.0</dl4j.version>
         <nd4j.version>0.9.0</nd4j.version>
+        <hadoop.version>2.8.1</hadoop.version>
+        <!--<nd4j.backend>nd4j-cuda-7.5-platform</nd4j.backend>-->
     </properties>
 
     <dependencies>
@@ -239,6 +241,17 @@
             <groupId>de.sciss</groupId>
             <artifactId>sphinx4-core</artifactId>
             <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-client-core</artifactId>
+            <version>${hadoop.version}</version>
         </dependency>
     </dependencies>
 
