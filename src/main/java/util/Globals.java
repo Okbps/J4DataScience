@@ -1,7 +1,5 @@
 package util;
 
-import javafx.scene.chart.CategoryAxis;
-
 /**
  * Created by Aspire on 17.06.2017.
  */
