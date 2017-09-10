@@ -266,6 +266,11 @@
             <version>1.2.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.aparapi</groupId>
+            <artifactId>aparapi</artifactId>
+            <version>1.4.0</version>
+        </dependency>
     </dependencies>
 
     <build>
