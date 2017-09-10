@@ -14,7 +14,7 @@ public class TextMapper extends Mapper<Object, Text, Text, IntWritable> {
     @Override
     protected void map(Object key, Text bookInfo, Context context)
             throws IOException, InterruptedException {
-        String[]book = bookInfo.toString().split("\t");
+        String[]book = bookInfo.toString().split("\\s{2}");
         bookTitle.set(book[0]);
         pages.set(Integer.parseInt(book[2]));
         context.write(bookTitle, pages);
