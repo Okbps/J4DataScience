@@ -18,8 +18,8 @@ public class ApplicationDriver {
         System.out.println("Enter a topic: ");
         this.topic = scanner.nextLine();
 
-//        System.out.println("Enter a sub-topic: ");
-//        this.subTopic = scanner.nextLine().toLowerCase();
+        System.out.println("Enter a sub-topic: ");
+        this.subTopic = scanner.nextLine().toLowerCase();
 
         System.out.println("Enter number of tweets: ");
         this.numberOfTweets = scanner.nextInt();
@@ -37,12 +37,9 @@ public class ApplicationDriver {
                 .map(TweetHandler::toLowerCase)
                 .filter(TweetHandler::isEnglish)
                 .map(TweetHandler::removeStopWords)
-//                .filter(s -> s.containsCharacter(this.subTopic))
+                .filter(s -> s.containsCharacter(this.subTopic))
                 .map(TweetHandler::performSentimentAnalysis)
-                .forEach(s -> {
-                    s.computeStats();
-                    System.out.println(s);
-                });
+                .forEach(TweetHandler::computeStats);
 
         System.out.println();
         System.out.println("Positive Reviews: " + TweetHandler.getNumberOfPositiveReviews());

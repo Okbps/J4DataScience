@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class TweetHandler {
     private String jsonText;
@@ -47,7 +48,7 @@ public class TweetHandler {
         try{
             JSONObject jsonObject = new JSONObject(this.jsonText);
             this.text = jsonObject.getString("text");
-            SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM d HH:mm:ss Z yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss ZZZZZ yyyy", Locale.ENGLISH);
 
             try{
                 this.date = sdf.parse(jsonObject.getString("created_at"));

@@ -53,8 +53,7 @@ public class SentimentAnalysisTrainingData {
                 Classified<CharSequence> classified = new Classified<>(oneLine[3], classification);
                 classifier.handle(classified);
 
-//                if(count==100) break;
-                if(count%10000==0) System.out.println(count + " processed");
+                if(count%1000==0) System.out.println(count + " processed");
             }
 
         }catch (IOException e){
