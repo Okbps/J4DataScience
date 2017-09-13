@@ -1,8 +1,9 @@
 package ch12Altogether;
 
+import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Constants;
-import com.twitter.hbc.core.endpoint.StatusesSampleEndpoint;
+import com.twitter.hbc.core.endpoint.StatusesFilterEndpoint;
 import com.twitter.hbc.core.processor.StringDelimitedProcessor;
 import com.twitter.hbc.httpclient.BasicClient;
 import com.twitter.hbc.httpclient.auth.Authentication;
@@ -35,8 +36,9 @@ public class TwitterStream {
         String accessSecret     = Props.getProperty("accessSecret");
 
         BlockingQueue<String> statusQueue = new LinkedBlockingQueue<String>(10000);
-        StatusesSampleEndpoint ending = new StatusesSampleEndpoint();
-        ending.stallWarnings(false);
+        StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
+        endpoint.trackTerms(Lists.newArrayList("twitterapi", this.topic));
+        endpoint.stallWarnings(false);
 
         Authentication twitterAuth = new OAuth1(consumerKey, consumerSecret, accessToken, accessSecret);
 
@@ -45,7 +47,7 @@ public class TwitterStream {
         BasicClient twitterClient = new ClientBuilder()
                 .name("Twitter client")
                 .hosts(Constants.STREAM_HOST)
-                .endpoint(ending)
+                .endpoint(endpoint)
                 .authentication(twitterAuth)
                 .processor(new StringDelimitedProcessor(statusQueue))
                 .build();
