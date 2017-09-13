@@ -14,7 +14,7 @@ public class Props {
 
     static{
         try {
-            PROPERTIES.load(new FileInputStream(RESOURCE_FOLDER + "template.properties"));
+            PROPERTIES.load(new FileInputStream(RESOURCE_FOLDER + "private.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
