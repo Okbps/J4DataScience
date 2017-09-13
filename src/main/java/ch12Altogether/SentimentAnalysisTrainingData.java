@@ -10,6 +10,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static util.Globals.RESOURCE_FOLDER;
@@ -38,7 +39,11 @@ public class SentimentAnalysisTrainingData {
 
             int count = 0;
             for (String s : lines) {
-                if (++count == 1) continue;
+                if (++count == 1) {
+                    System.out.println(LocalDateTime.now() + " started");
+                    System.out.println(lines.size() + " lines to go");
+                    continue;
+                }
 
                 String[] oneLine = s.split(",");
 
@@ -49,13 +54,14 @@ public class SentimentAnalysisTrainingData {
                 classifier.handle(classified);
 
 //                if(count==100) break;
-                if(count%10000==0) System.out.println(count + "/" + lines.size() + " processed");
+                if(count%10000==0) System.out.println(count + " processed");
             }
 
         }catch (IOException e){
 
         }
 
+        System.out.println(LocalDateTime.now() + " finished");
 
         try(ObjectOutputStream os = new ObjectOutputStream(
                 new FileOutputStream(MODEL_PATH))
@@ -64,6 +70,9 @@ public class SentimentAnalysisTrainingData {
         } catch (IOException e){
             e.printStackTrace();
         }
+
+        System.out.println(LocalDateTime.now() + " saved");
+
     }
 
     public static LMClassifier invokeModel(){
